@@ -1,0 +1,30 @@
+# Vivado generated files
+project_1/.Xil/
+project_1/*.cache/
+project_1/*.hw/
+project_1/*.ip_user_files/
+project_1/*.runs/
+project_1/*.sim/
+
+# Vivado logs and journals
+*.log
+*.jou
+*.backup.jou
+*.backup.log
+*.str
+hs_err_*.log
+tcl_console.txt
+
+# Large files (exceed GitHub 100MB limit)
+project_1/*.srcs.zip
+project_1/sim/model_fixed.hex
+*.hex
+*.exe
+*.bin
+*.elf
+
+# OS files
+Thumbs.db
+.DS_Store
+.DS_Store*
+__MACOSX/

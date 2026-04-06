@@ -1,0 +1,57 @@
+// Basit UART Test - "Hello!" gönderir
+// Reset vector: 0x7400
+// UART TX: 0x8010, UART Status: 0x8014
+
+// === Başlangıç (0x7400) ===
+00008537    // lui a0, 0x8       -> a0 = 0x8000 (UART base upper)
+01050513    // addi a0, a0, 0x10 -> a0 = 0x8010 (UART TX addr)
+04800593    // li a1, 0x48       -> a1 = 'H' (0x48)
+00B52023    // sw a1, 0(a0)      -> UART TX = 'H'
+
+// === delay loop ===
+000F47B7    // lui a5, 0xF4      -> a5 = 0xF4000 (delay counter)
+FFF78793    // addi a5, a5, -1   -> a5--
+FE079EE3    // bnez a5, -4       -> loop if a5 != 0
+
+// === 'e' gönder ===
+06500593    // li a1, 0x65       -> a1 = 'e'
+00B52023    // sw a1, 0(a0)      -> UART TX = 'e'
+
+// === delay ===
+000F47B7    // lui a5, 0xF4
+FFF78793    // addi a5, a5, -1
+FE079EE3    // bnez a5, -4
+
+// === 'l' gönder ===
+06C00593    // li a1, 0x6C       -> a1 = 'l'
+00B52023    // sw a1, 0(a0)
+
+// === delay ===
+000F47B7    // lui a5, 0xF4
+FFF78793    // addi a5, a5, -1
+FE079EE3    // bnez a5, -4
+
+// === 'l' gönder ===
+06C00593    // li a1, 0x6C       -> a1 = 'l'
+00B52023    // sw a1, 0(a0)
+
+// === delay ===
+000F47B7    // lui a5, 0xF4
+FFF78793    // addi a5, a5, -1
+FE079EE3    // bnez a5, -4
+
+// === 'o' gönder ===
+06F00593    // li a1, 0x6F       -> a1 = 'o'
+00B52023    // sw a1, 0(a0)
+
+// === delay ===
+000F47B7    // lui a5, 0xF4
+FFF78793    // addi a5, a5, -1
+FE079EE3    // bnez a5, -4
+
+// === '!' gönder ===
+02100593    // li a1, 0x21       -> a1 = '!'
+00B52023    // sw a1, 0(a0)
+
+// === Sonsuz döngü ===
+0000006F    // jal x0, 0 (infinite loop)

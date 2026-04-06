@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="fpga_top_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="fpga_top_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="53.301 ns"></ZoomEndTime>
+      <Cursor1Time time="0.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="205"></NameColumnWidth>
+      <ValueColumnWidth column_width="90"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="17" />
+   <wvobject fp_name="/fpga_top_tb/reset_i" type="logic">
+      <obj_property name="ElementShortName">reset_i</obj_property>
+      <obj_property name="ObjectShortName">reset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fpga_top_tb/dut/core0/clk_i" type="logic">
+      <obj_property name="ElementShortName">clk_i</obj_property>
+      <obj_property name="ObjectShortName">clk_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fpga_top_tb/dut/core0/data_addr_o" type="array">
+      <obj_property name="ElementShortName">data_addr_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_addr_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fpga_top_tb/dut/core0/instr_i" type="array">
+      <obj_property name="ElementShortName">instr_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instr_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fpga_top_tb/dut/core0/instr_addr_o" type="array">
+      <obj_property name="ElementShortName">instr_addr_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instr_addr_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fpga_top_tb/dut/core0/instr_q" type="array">
+      <obj_property name="ElementShortName">instr_q[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instr_q[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fpga_top_tb/dut/core0/tr_pc" type="array">
+      <obj_property name="ElementShortName">tr_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tr_pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fpga_top_tb/dut/core0/tr_instr" type="array">
+      <obj_property name="ElementShortName">tr_instr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tr_instr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fpga_top_tb/dut/core0/tr_reg_data" type="array">
+      <obj_property name="ElementShortName">tr_reg_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tr_reg_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fpga_top_tb/dut/core0/tr_valid" type="logic">
+      <obj_property name="ElementShortName">tr_valid</obj_property>
+      <obj_property name="ObjectShortName">tr_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fpga_top_tb/dut/u_uart/u_tx/r_TX_Data" type="array">
+      <obj_property name="ElementShortName">r_TX_Data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">r_TX_Data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fpga_top_tb/dut/u_uart/u_tx/i_TX_Byte" type="array">
+      <obj_property name="ElementShortName">i_TX_Byte[7:0]</obj_property>
+      <obj_property name="ObjectShortName">i_TX_Byte[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fpga_top_tb/dut/u_uart/u_rx/r_RX_Byte" type="array">
+      <obj_property name="ElementShortName">r_RX_Byte[7:0]</obj_property>
+      <obj_property name="ObjectShortName">r_RX_Byte[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fpga_top_tb/dut/u_uart/u_rx/r_RX_Data" type="logic">
+      <obj_property name="ElementShortName">r_RX_Data</obj_property>
+      <obj_property name="ObjectShortName">r_RX_Data</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fpga_top_tb/dut/u_uart/tx_active" type="logic">
+      <obj_property name="ElementShortName">tx_active</obj_property>
+      <obj_property name="ObjectShortName">tx_active</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fpga_top_tb/dut/u_uart/tx_done" type="logic">
+      <obj_property name="ElementShortName">tx_done</obj_property>
+      <obj_property name="ObjectShortName">tx_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fpga_top_tb/dut/u_uart/tx_o" type="logic">
+      <obj_property name="ElementShortName">tx_o</obj_property>
+      <obj_property name="ObjectShortName">tx_o</obj_property>
+   </wvobject>
+</wave_config>

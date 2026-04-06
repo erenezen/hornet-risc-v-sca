@@ -1,0 +1,65 @@
+// FIRMWARE: Hello World with LSR Polling (Wait for TX Ready)
+// Base Address: 0x000003F8 (x10)
+// Status Bit:   Bit 21 of 32-bit word at 0x3F8 (LSR bit 5 << 16)
+// Sequence:     LW -> SRLI 21 -> ANDI 1 -> BNEZ / BEQ
+
+@0000
+00000013 // NOP
+3F800513 // li x10, 0x3F8 (Base)
+
+// 'H' (0x48)
+04800593 // li x11, 0x48
+00B52023 // sw x11, 0(x10) (Send H)
+
+// WAIT LOOP 1
+00052603 // lw x12, 0(x10)      <-- Wait Loop Start
+01565613 // srli x12, x12, 21   (Shift bit 21 to bit 0)
+00167613 // andi x12, x12, 1    (Mask bit 0)
+FE060AE3 // beq x12, x0, -12    (Jump back to lw if 0)
+
+// 'e' (0x65)
+06500593 // li x11, 0x65
+00B52023 // sw x11, 0(x10)
+
+// WAIT LOOP 2
+00052603 
+01565613 
+00167613 
+FE060AE3 
+
+// 'l' (0x6c)
+06C00593 
+00B52023 
+
+// WAIT LOOP 3
+00052603 
+01565613 
+00167613 
+FE060AE3 
+
+// 'l' (0x6c)
+06C00593 
+00B52023 
+
+// WAIT LOOP 4
+00052603 
+01565613 
+00167613 
+FE060AE3 
+
+// 'o' (0x6f)
+06F00593 
+00B52023 
+
+// WAIT LOOP 5
+00052603 
+01565613 
+00167613 
+FE060AE3 
+
+// '!' (0x21)
+02100593 
+00B52023 
+
+// HALT / LOOP FOREVER
+0000006F // j 0 (Infinite Loop)
